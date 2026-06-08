@@ -1,0 +1,119 @@
+:root {
+  --body-background: #7FCD91;
+  --body_color: #5B5656;
+  --body_hover_color: #4D4646; 
+  --text_color: #f5EAEA;
+  --font: 'Inter', system-ui, sans-serif;
+  --header_color:#7FCD91; 
+
+  min-height: 100vh;
+}
+
+[data-theme='dark'] {
+  --body-background: #5B5656 ;
+  --body_color: #7FCD91 ;
+  --body_hover_color: #f5EAEA;
+  --text_color: #5B5656;
+  --header_color: #5B5656;
+
+  min-height: 100vh;
+}
+
+[data-theme='light'] {
+  --body-background: #7FCD91;
+  --body_color: #5B5656; 
+  --body_hover_color: #4D4646; 
+  --text_color: #f5EAEA;
+  --header_color:#7FCD91;
+}
+
+html { font-family: var(--font); background: var(--body-background); color: var(--text_color); }
+
+body{
+  background-color: var(--body-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 80px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page{
+
+  width: 100%;
+  max-width: 480px;
+  padding-top: 48px;
+}
+
+.header {
+  background-color: var(--body_color);
+  border-radius: 0px;
+  border: 1px solid var(--body_color);
+  padding : 7px 16px;  
+  text-align: start;
+  color: var(--header_color);
+  font-size: 0.7rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+ /* ---- CARD ---- */
+.card{
+  background-color: var(--body_color);
+  border: 1px solid var(--body_color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  object-position: center;
+
+}
+.card .card-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.card .card-title {
+  margin: 0;
+  color: var(--text_color)
+}
+.card .card-text{
+  color: var(--text_color)
+}
+
+
+
+.button-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; /* Removes the default link underline */
+  background-color: var(--body_color);
+  color: var(--text_color);
+  padding: 10px 20px;
+  gap: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: var(--body_hover_color);
+  color: var(--text_color); /* Ensures text stays visible on hover */
+}
+
+
+.dark-mode-toggle {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+}
+
